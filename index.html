@@ -490,8 +490,16 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   clear:both!important;
   margin-top:0!important;
 }
+.homeTitleClickUpgrade{display:none}
+.heroContent{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+.heroContent:hover:before{
+  background:linear-gradient(135deg,rgba(0,0,0,.60),rgba(0,28,28,.47) 55%,rgba(0,0,0,.56))!important;
+}
 </style></head><body>
-<div class="mainTop"><header class="hero"><div class="heroContent"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
+<div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
 <div id="home" class="homePanel"><div class="searchZone"><div class="mainSearch"><span class="glass">⌕</span><input id="q" placeholder="חיפוש יעד, מלון או אטרקציה..." oninput="filter()" autocomplete="off"><button onclick="filter()">חפש</button></div><div id="grid" class="grid"></div></div></div>
 <div id="phuket" class="hidden"><button onclick="home()">← חזרה לכל היעדים</button><h2>פוקט</h2><p>מלונות שנוספו למאגר</p><div class="hotelCard" onclick="openHotel()"><div class="placeholder"><b>תמונת מלון מאומתת תתווסף כאן</b><br>לא נציג צילום שאינו מאומת כשייך למלון.</div><div class="content"><h3>Mövenpick Myth Hotel Patong Phuket ★★★★★</h3><p>📍 Patong · מלון יוקרתי במיקום מרכזי</p><div class="tags"><span>משפחות</span><span>זוגות</span><span>Kids Club</span><span>Pool Access</span></div></div></div></div>
