@@ -1398,6 +1398,48 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     box-sizing:border-box!important;
   }
 }
+
+/* FINAL expanded hotel width override */
+@media(min-width:701px){
+  body .contentStage.active.hotelDetailMode{
+    width:calc(100vw - 244px)!important;
+    max-width:none!important;
+    margin-right:214px!important;
+    margin-left:30px!important;
+    padding-right:0!important;
+    padding-left:0!important;
+    box-sizing:border-box!important;
+  }
+
+  body .contentStage.active.hotelDetailMode > .hotelDetailPanel.active{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:40px 34px!important;
+    box-sizing:border-box!important;
+  }
+}
+
+@media(max-width:700px){
+  body .contentStage.active.hotelDetailMode{
+    width:calc(100vw - 162px)!important;
+    max-width:none!important;
+    margin-right:154px!important;
+    margin-left:8px!important;
+    padding-right:0!important;
+    padding-left:0!important;
+    box-sizing:border-box!important;
+  }
+
+  body .contentStage.active.hotelDetailMode > .hotelDetailPanel.active{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
