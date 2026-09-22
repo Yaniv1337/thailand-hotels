@@ -1108,6 +1108,44 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   color:#fff!important;
   font-weight:900!important;
 }
+.seasonNoteSidebarFontFit{display:none}
+#seasonsPanel .seasonGuide{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+}
+#seasonsPanel .seasonGuideNoteStrong{
+  display:inline-block!important;
+  width:fit-content!important;
+  max-width:min(100%,980px)!important;
+  align-self:flex-start!important;
+  margin:0!important;
+  padding:10px 0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  color:#fff!important;
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  line-height:1.65!important;
+  text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 9px rgba(0,0,0,.55)!important;
+}
+#seasonsPanel .seasonGuideNoteStrong strong,
+#seasonsPanel .seasonGuideNoteStrong b{
+  color:#fff!important;
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-weight:800!important;
+}
+@media(max-width:700px){
+  #seasonsPanel .seasonGuideNoteStrong{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -1240,7 +1278,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="seasonGuideCard rainGuide"><strong>🌧️ עונה גשומה</strong><span>תקופה עם יותר גשם, לחות ולעיתים השפעה של המונסון. לא בהכרח יורד גשם כל היום, אבל יכולים להיות ממטרים חזקים, ים פחות רגוע ושינויים בפעילויות ושייט.</span></div>
       <div class="seasonGuideCard hotGuide"><strong>🔥 חם מאוד</strong><span>תקופה שבה עומס החום והלחות גבוהים במיוחד. עדיין אפשר לטייל וליהנות, אבל מומלץ לקחת בחשבון יותר מנוחות, שתייה, צל ופעילויות בשעות הפחות חמות.</span></div>
     </div>
-    <p class="seasonGuideNote seasonGuideNoteStrong"><strong>חשוב לדעת:</strong><br>המידע המוצג מבוסס על <b>מגמות אקלים וממוצעים רב־שנתיים</b>, ונועד לספק תמונה כללית של תנאי מזג האוויר הצפויים בכל יעד ובכל תקופה בשנה.<br>הסיווג אינו מהווה תחזית מזג אוויר לתאריך מסוים, ולכן ייתכנו גם בתקופות המוגדרות כעונה טובה ימים גשומים, ובתקופות הגשומות ימים שמשיים ונעימים.</p>
+    <p class="seasonGuideNote seasonGuideNoteStrong"><strong>חשוב לדעת:</strong><br><b>המידע המוצג מבוסס על מגמות אקלים וממוצעים רב־שנתיים, ונועד לספק תמונה כללית של תנאי מזג האוויר הצפויים בכל יעד ובכל תקופה בשנה.</b><br><b>הסיווג אינו מהווה תחזית מזג אוויר לתאריך מסוים, ולכן ייתכנו גם בתקופות המוגדרות כעונה טובה ימים גשומים, ובתקופות הגשומות ימים שמשיים ונעימים.</b></p>
   </div>
   <div class="seasonLegend" aria-label="מקרא עונות">
     <span class="legendGood">☀️ עונה טובה</span>
