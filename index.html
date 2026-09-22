@@ -498,6 +498,97 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
 .heroContent:hover:before{
   background:linear-gradient(135deg,rgba(0,0,0,.60),rgba(0,28,28,.47) 55%,rgba(0,0,0,.56))!important;
 }
+.seasonCardsUpgrade{display:none}
+.seasonsPanel{width:100%}
+.seasonLegend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 18px;
+}
+.seasonLegend span{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 11px;
+  border-radius:999px;
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:0 5px 12px rgba(0,0,0,.16);
+}
+.seasonLegend .good{background:#2f8a58}
+.seasonLegend .hot{background:#d77a22}
+.seasonLegend .rain{background:#b94444}
+.seasonGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  max-width:1220px;
+}
+.seasonCard{
+  overflow:hidden;
+  border-radius:22px;
+  padding:17px 18px 18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(226,237,235,.94));
+  border:1px solid rgba(255,255,255,.92);
+  box-shadow:0 8px 0 rgba(27,79,82,.16),0 18px 30px rgba(0,35,42,.24),inset 0 1px 0 #fff;
+}
+.seasonCardHead{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.seasonCardHead h3{
+  margin:0;
+  font-family:'Rubik','Heebo',Arial,sans-serif;
+  font-size:20px;
+  font-weight:900;
+  color:#173f43;
+}
+.seasonCardHead span{
+  color:#637879;
+  font-size:12px;
+  font-weight:700;
+}
+.seasonMonths{
+  direction:rtl;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:5px;
+}
+.seasonMonth{
+  min-width:0;
+  min-height:49px;
+  padding:6px 3px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:10px;
+  line-height:1.15;
+  border:1px solid rgba(23,63,67,.10);
+}
+.seasonMonth b{font-size:10px}
+.seasonMonth small{font-size:12px;font-weight:900;margin-top:3px}
+.seasonMonth.pending{
+  background:rgba(23,63,67,.07);
+  color:#6d8081;
+}
+.seasonMonth.good{background:#dff2e6;color:#236b43;border-color:#abd3ba}
+.seasonMonth.hot{background:#fae5d0;color:#a65610;border-color:#ebbd8f}
+.seasonMonth.rain{background:#f5dddd;color:#9e3232;border-color:#dfaaaa}
+@media(max-width:980px){
+  .seasonGrid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .seasonCard{padding:14px}
+  .seasonMonths{overflow-x:auto;display:flex;padding-bottom:3px}
+  .seasonMonth{min-width:54px}
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -768,7 +859,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <li onclick="selectPhuketArea('מאי קאו',event)">מאי קאו</li>
 <li onclick="selectPhuketArea('קאטו',event)">קאטו</li>
 <li onclick="selectPhuketArea('קמאלה',event)">קמאלה</li>
-</ul><li onclick="selectDestination('קאו לאק')">קאו לאק</li><li onclick="selectDestination('קוסמוי')">קוסמוי</li><li onclick="selectDestination('קופנגן')">קופנגן</li><li onclick="selectDestination('קראבי')">קראבי</li><li onclick="selectDestination('קופיפי')">קופיפי</li><li onclick="selectDestination('קו לנטה')">קו לנטה</li><li onclick="selectDestination('קו צ׳אנג')">קו צ׳אנג</li><li onclick="selectDestination('קו יאו יאי')">קו יאו יאי</li><li onclick="selectDestination('קו יאו נוי')">קו יאו נוי</li><li onclick="selectDestination('קו סאמט')">קו סאמט</li><li onclick="selectDestination('פאטאיה')">פאטאיה</li><li onclick="selectDestination('בנגקוק')">בנגקוק</li><li onclick="selectDestination('הואה הין')">הואה הין</li><li onclick="selectDestination('קנצ׳נבורי')">קנצ׳נבורי</li><li onclick="selectDestination('צ׳יאנג מאי')">צ׳יאנג מאי</li><li onclick="selectDestination('פאי')">פאי</li><li onclick="selectDestination('צ׳יאנג ראי')">צ׳יאנג ראי</li></ul><button onclick="alert('אזור העונות בתאילנד יתווסף בשלב הבא')">עונות בתאילנד</button><button onclick="alert('אזור האטרקציות יתווסף בשלב הבא')">אטרקציות</button></nav><script>
+</ul><li onclick="selectDestination('קאו לאק')">קאו לאק</li><li onclick="selectDestination('קוסמוי')">קוסמוי</li><li onclick="selectDestination('קופנגן')">קופנגן</li><li onclick="selectDestination('קראבי')">קראבי</li><li onclick="selectDestination('קופיפי')">קופיפי</li><li onclick="selectDestination('קו לנטה')">קו לנטה</li><li onclick="selectDestination('קו צ׳אנג')">קו צ׳אנג</li><li onclick="selectDestination('קו יאו יאי')">קו יאו יאי</li><li onclick="selectDestination('קו יאו נוי')">קו יאו נוי</li><li onclick="selectDestination('קו סאמט')">קו סאמט</li><li onclick="selectDestination('פאטאיה')">פאטאיה</li><li onclick="selectDestination('בנגקוק')">בנגקוק</li><li onclick="selectDestination('הואה הין')">הואה הין</li><li onclick="selectDestination('קנצ׳נבורי')">קנצ׳נבורי</li><li onclick="selectDestination('צ׳יאנג מאי')">צ׳יאנג מאי</li><li onclick="selectDestination('פאי')">פאי</li><li onclick="selectDestination('צ׳יאנג ראי')">צ׳יאנג ראי</li></ul><button onclick="openSeasons()">עונות בתאילנד</button><button onclick="alert('אזור האטרקציות יתווסף בשלב הבא')">אטרקציות</button></nav><script>
 function selectDestination(name,e){
   if(e)e.stopPropagation();
   if(name==='פוקט'){
@@ -800,6 +891,8 @@ function hideHotelDetails(){
 }
 function showPhuketAreas(){
   hideHotelDetails();
+  const seasons=document.getElementById('seasonsPanel');
+  if(seasons)seasons.style.display='none';
   const areas=document.getElementById('phuketAreas');
   const cards=document.getElementById('phuketCards');
   if(areas)areas.style.display='block';
@@ -808,6 +901,8 @@ function showPhuketAreas(){
 function showPhuketArea(area){
   currentPhuketArea=area;
   hideHotelDetails();
+  const seasons=document.getElementById('seasonsPanel');
+  if(seasons)seasons.style.display='none';
   const areas=document.getElementById('phuketAreas');
   const cards=document.getElementById('phuketCards');
   if(areas)areas.style.display='none';
@@ -825,6 +920,8 @@ function showPhuketArea(area){
 }
 function showPhuketCards(){showPhuketArea(currentPhuketArea||'פאטונג')}
 function showHotel(id){
+  const seasons=document.getElementById('seasonsPanel');
+  if(seasons)seasons.style.display='none';
   const areas=document.getElementById('phuketAreas');
   const cards=document.getElementById('phuketCards');
   if(areas)areas.style.display='none';
@@ -833,6 +930,21 @@ function showHotel(id){
   document.getElementById(id).classList.add('active');
 }
 function showMovenpick(){currentPhuketArea='פאטונג';showHotel('movenpickDetail')}
+function openSeasons(){
+  hide();
+  const stage=document.getElementById('contentStage');
+  if(stage){stage.classList.add('active');stage.style.display='block'}
+  const areas=document.getElementById('phuketAreas');
+  const cards=document.getElementById('phuketCards');
+  if(areas)areas.style.display='none';
+  if(cards)cards.style.display='none';
+  hideHotelDetails();
+  const seasons=document.getElementById('seasonsPanel');
+  if(seasons)seasons.style.display='block';
+  const menu=document.querySelector('.sideMenu');
+  if(menu){menu.classList.remove('phuketOpen');menu.classList.remove('destOpen')}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 </script><script>
 async function openTboWithHotel(e,name){
   if(e) e.preventDefault();
