@@ -669,6 +669,138 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   .seasonMonths{grid-template-columns:repeat(4,minmax(0,1fr))!important}
   .seasonCardHead h3{font-size:20px!important}
 }
+.seasonFinalMapping2025{display:none}
+#seasonsPanel{
+  width:100%!important;
+}
+#seasonsPanel .seasonLegend{
+  width:100%;
+  display:flex!important;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:2px 0 20px!important;
+  padding:0!important;
+}
+#seasonsPanel .seasonLegend span{
+  display:inline-flex!important;
+  align-items:center;
+  gap:5px;
+  min-height:34px;
+  padding:7px 13px!important;
+  border-radius:999px!important;
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  box-shadow:0 6px 14px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.55)!important;
+}
+#seasonsPanel .legendGood{
+  color:#245f3c!important;
+  background:#dff3e6!important;
+  border:1px solid #afd6bc!important;
+}
+#seasonsPanel .legendRain{
+  color:#225b80!important;
+  background:#dceef9!important;
+  border:1px solid #a9cfe8!important;
+}
+#seasonsPanel .legendHot{
+  color:#9c5618!important;
+  background:#fae5cf!important;
+  border:1px solid #e8bc90!important;
+}
+#seasonsPanel .seasonGrid{
+  width:100%!important;
+  max-width:none!important;
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr))!important;
+  gap:20px!important;
+  align-items:stretch!important;
+}
+#seasonsPanel .seasonCard{
+  width:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  border-radius:22px!important;
+  overflow:hidden!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(226,237,235,.95))!important;
+  border:1px solid rgba(255,255,255,.94)!important;
+  box-shadow:0 8px 0 rgba(27,79,82,.14),0 18px 30px rgba(0,35,42,.23),inset 0 1px 0 #fff!important;
+}
+#seasonsPanel .seasonCardHead{
+  min-height:60px!important;
+  padding:12px 17px!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  background:linear-gradient(135deg,rgba(12,56,60,.96),rgba(25,91,88,.91))!important;
+  border-bottom:1px solid rgba(255,255,255,.18)!important;
+}
+#seasonsPanel .seasonCardHead h3{
+  margin:0!important;
+  font-family:'Rubik','Heebo',Arial,sans-serif!important;
+  font-size:21px!important;
+  font-weight:900!important;
+  color:#fff7d7!important;
+  text-shadow:0 2px 6px rgba(0,0,0,.40)!important;
+}
+#seasonsPanel .seasonCardHead span{
+  display:block!important;
+  margin-top:1px!important;
+  color:rgba(255,255,255,.75)!important;
+  font-size:12px!important;
+  font-weight:700!important;
+}
+#seasonsPanel .seasonMonths{
+  direction:rtl!important;
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:7px!important;
+  padding:13px 14px 15px!important;
+}
+#seasonsPanel .seasonMonth{
+  min-width:0!important;
+  min-height:50px!important;
+  padding:6px 3px!important;
+  border-radius:10px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.70)!important;
+}
+#seasonsPanel .seasonMonth b{
+  font-size:10.5px!important;
+  line-height:1.05!important;
+  white-space:nowrap!important;
+}
+#seasonsPanel .seasonMonth small{
+  margin-top:4px!important;
+  font-size:15px!important;
+  line-height:1!important;
+}
+#seasonsPanel .seasonMonth.good{
+  color:#245f3c!important;
+  background:#dff3e6!important;
+  border:1px solid #afd6bc!important;
+}
+#seasonsPanel .seasonMonth.rain{
+  color:#225b80!important;
+  background:#dceef9!important;
+  border:1px solid #a9cfe8!important;
+}
+#seasonsPanel .seasonMonth.hot{
+  color:#9c5618!important;
+  background:#fae5cf!important;
+  border:1px solid #e8bc90!important;
+}
+@media(max-width:1100px){
+  #seasonsPanel .seasonGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:760px){
+  #seasonsPanel .seasonGrid{grid-template-columns:1fr!important}
+  #seasonsPanel .seasonMonths{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -792,118 +924,69 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 });;</script><div class="footer">🌺 <b>Thailand Hotels</b> · המאגר הפרטי שלך לתאילנד 🌴</div><div class="quickNav"><div class="quickSearch"><input id="siteSearch" placeholder="חיפוש" autocomplete="off"><div id="searchSuggestions" class="searchSuggestions"></div><button class="searchIconBtn" onclick="searchSite()" aria-label="חיפוש" title="חיפוש"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><line x1="16" y1="16" x2="21" y2="21"></line></svg></button></div><div class="destinationPills" id="destinationPills"></div></div><script>const navDestinations=['פוקט','קאו לאק','קוסמוי','קופנגן','קראבי','קופיפי','קו לנטה','קו צ׳אנג','קו יאו יאי','קו יאו נוי','קו סאמט','פאטאיה','בנגקוק','הואה הין','קנצ׳נבורי','צ׳יאנג מאי','פאי','צ׳יאנג ראי'];document.getElementById('destinationPills').innerHTML=navDestinations.map((n,i)=>'<button onclick="'+(i===0?'openPhuket()':'empty(\''+n+'\')')+'">'+n+'</button>').join('');function searchSite(){const v=document.getElementById('siteSearch').value.trim().toLowerCase();if(!v)return;if(v.includes('movenpick')||v.includes('mövenpick')||v.includes('מובנפיק')||v.includes('מית')||v.includes('myth')){openPhuket();currentPhuketArea='פאטונג';showMovenpick();return}if(v.includes('m social')||v.includes('msocial')||v.includes('m-social')||v.includes('סושיאל')){openPhuket();currentPhuketArea='פאטונג';showHotel('msocialDetail');return}if(v.includes('charm')||v.includes('צארם')||v.includes('צ׳ארם')){openPhuket();currentPhuketArea='פאטונג';showHotel('charmDetail');return}const m=navDestinations.find(x=>x.toLowerCase().includes(v)||v.includes(x.toLowerCase()));if(m){navDestinations.indexOf(m)===0?openPhuket():empty(m)}else alert('לא נמצא יעד או מלון בשם '+v)}</script><main id="contentStage" class="contentStage"><section id="seasonsPanel" class="seasonsPanel" style="display:none">
-      <button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button>
-      <h2 class="destinationHead">עונות בתאילנד</h2>
-      <div class="seasonGrid">
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>פוקט</h3><span>Phuket</span></div>
+  <button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button>
+  <h2 class="destinationHead">עונות בתאילנד</h2>
+  <div class="seasonLegend" aria-label="מקרא עונות">
+    <span class="legendGood">☀️ עונה טובה</span>
+    <span class="legendRain">🌧️ עונה גשומה</span>
+    <span class="legendHot">🔥 חם מאוד</span>
   </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קאו לאק</h3><span>Khao Lak</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קוסמוי</h3><span>Koh Samui</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קופנגן</h3><span>Koh Phangan</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קראבי</h3><span>Krabi</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קופיפי</h3><span>Koh Phi Phi</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קו לנטה</h3><span>Koh Lanta</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קו צ׳אנג</h3><span>Koh Chang</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קו יאו יאי</h3><span>Koh Yao Yai</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קו יאו נוי</h3><span>Koh Yao Noi</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קו סאמט</h3><span>Koh Samet</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>פאטאיה</h3><span>Pattaya</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>בנגקוק</h3><span>Bangkok</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>הואה הין</h3><span>Hua Hin</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>קנצ׳נבורי</h3><span>Kanchanaburi</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>צ׳יאנג מאי</h3><span>Chiang Mai</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>פאי</h3><span>Pai</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article>
-<article class="seasonCard">
-  <div class="seasonCardHead">
-    <div><h3>צ׳יאנג ראי</h3><span>Chiang Rai</span></div>
-  </div>
-  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
-</article></div>
-    </section><section id="phuketAreas" class="phuketAreasSection"><button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
+  <div class="seasonGrid"><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>פוקט</h3><span>Phuket</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קאו לאק</h3><span>Khao Lak</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קוסמוי</h3><span>Koh Samui</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מאי</b><small>🔥</small></span><span class="seasonMonth good" title="עונה טובה"><b>יוני</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>יולי</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>אוגוסט</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>דצמבר</b><small>🌧️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קופנגן</h3><span>Koh Phangan</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>יוני</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>יולי</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>אוגוסט</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>דצמבר</b><small>🌧️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קראבי</h3><span>Krabi</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קופיפי</h3><span>Koh Phi Phi</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קו לנטה</h3><span>Koh Lanta</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קו צ׳אנג</h3><span>Koh Chang</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קו יאו יאי</h3><span>Koh Yao Yai</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קו יאו נוי</h3><span>Koh Yao Noi</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>מרץ</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אפריל</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>נובמבר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קו סאמט</h3><span>Koh Samet</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>פאטאיה</h3><span>Pattaya</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>בנגקוק</h3><span>Bangkok</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>הואה הין</h3><span>Hua Hin</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מאי</b><small>🔥</small></span><span class="seasonMonth good" title="עונה טובה"><b>יוני</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>יולי</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>אוגוסט</b><small>☀️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>קנצ׳נבורי</h3><span>Kanchanaburi</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>צ׳יאנג מאי</h3><span>Chiang Mai</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>פאי</h3><span>Pai</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article><article class="seasonCard">
+    <div class="seasonCardHead"><div><h3>צ׳יאנג ראי</h3><span>Chiang Rai</span></div></div>
+    <div class="seasonMonths"><span class="seasonMonth good" title="עונה טובה"><b>ינואר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>פברואר</b><small>☀️</small></span><span class="seasonMonth hot" title="חם מאוד"><b>מרץ</b><small>🔥</small></span><span class="seasonMonth hot" title="חם מאוד"><b>אפריל</b><small>🔥</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>מאי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יוני</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>יולי</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוגוסט</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>ספטמבר</b><small>🌧️</small></span><span class="seasonMonth rain" title="עונה גשומה"><b>אוקטובר</b><small>🌧️</small></span><span class="seasonMonth good" title="עונה טובה"><b>נובמבר</b><small>☀️</small></span><span class="seasonMonth good" title="עונה טובה"><b>דצמבר</b><small>☀️</small></span></div>
+  </article></div>
+</section><section id="phuketAreas" class="phuketAreasSection"><button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
 <button onclick="showPhuketArea('פאטונג')"><strong>פאטונג</strong><small>Patong</small><span>3 מלונות</span></button>
 <button onclick="showPhuketArea('קאטה')"><strong>קאטה</strong><small>Kata</small><span>0 מלונות</span></button>
 <button onclick="showPhuketArea('קארון')"><strong>קארון</strong><small>Karon</small><span>0 מלונות</span></button>
