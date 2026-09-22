@@ -995,6 +995,95 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
 @media(max-width:900px){
   #seasonsPanel .seasonGuideCards{grid-template-columns:1fr}
 }
+.season3DUnifiedUpgrade{display:none}
+
+/* Unified 3D styling for Thailand seasons section */
+#seasonsPanel .seasonGuideIntro,
+#seasonsPanel .seasonGuideNote{
+  border-radius:18px!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(231,239,238,.95))!important;
+  border:1px solid rgba(255,255,255,.95)!important;
+  box-shadow:
+    0 7px 0 rgba(27,79,82,.13),
+    0 16px 26px rgba(0,35,42,.20),
+    inset 0 1px 0 rgba(255,255,255,1)!important;
+}
+
+#seasonsPanel .seasonGuideCard{
+  border-radius:19px!important;
+  box-shadow:
+    0 8px 0 rgba(27,79,82,.13),
+    0 17px 27px rgba(0,35,42,.19),
+    inset 0 1px 0 rgba(255,255,255,.92)!important;
+  transition:transform .17s ease,box-shadow .17s ease!important;
+}
+#seasonsPanel .seasonGuideCard:hover{
+  transform:translateY(-3px)!important;
+  box-shadow:
+    0 11px 0 rgba(27,79,82,.12),
+    0 22px 31px rgba(0,35,42,.23),
+    inset 0 1px 0 rgba(255,255,255,.95)!important;
+}
+
+#seasonsPanel .seasonLegend span{
+  box-shadow:
+    0 5px 0 rgba(27,79,82,.11),
+    0 10px 17px rgba(0,35,42,.14),
+    inset 0 1px 0 rgba(255,255,255,.86)!important;
+}
+
+#seasonsPanel .seasonCard{
+  border-radius:24px!important;
+  box-shadow:
+    0 10px 0 rgba(27,79,82,.15),
+    0 22px 34px rgba(0,35,42,.25),
+    inset 0 1px 0 rgba(255,255,255,1)!important;
+  transition:transform .18s ease,box-shadow .18s ease!important;
+}
+#seasonsPanel .seasonCard:hover{
+  transform:translateY(-4px)!important;
+  box-shadow:
+    0 13px 0 rgba(27,79,82,.14),
+    0 27px 38px rgba(0,35,42,.29),
+    inset 0 1px 0 rgba(255,255,255,1)!important;
+}
+#seasonsPanel .seasonCardHead{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.12),
+    inset 0 -1px 0 rgba(0,0,0,.12)!important;
+}
+
+#seasonsPanel .seasonMonth{
+  border-radius:11px!important;
+  box-shadow:
+    0 3px 0 rgba(27,79,82,.09),
+    0 6px 10px rgba(0,35,42,.10),
+    inset 0 1px 0 rgba(255,255,255,.82)!important;
+  transition:transform .14s ease,box-shadow .14s ease!important;
+}
+#seasonsPanel .seasonMonth:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:
+    0 5px 0 rgba(27,79,82,.08),
+    0 9px 13px rgba(0,35,42,.13),
+    inset 0 1px 0 rgba(255,255,255,.90)!important;
+}
+
+@media(max-width:700px){
+  #seasonsPanel .seasonGuideIntro,
+  #seasonsPanel .seasonGuideNote{
+    box-shadow:
+      0 5px 0 rgba(27,79,82,.11),
+      0 12px 20px rgba(0,35,42,.16),
+      inset 0 1px 0 rgba(255,255,255,1)!important;
+  }
+  #seasonsPanel .seasonCard{
+    box-shadow:
+      0 7px 0 rgba(27,79,82,.13),
+      0 16px 25px rgba(0,35,42,.21),
+      inset 0 1px 0 rgba(255,255,255,1)!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
