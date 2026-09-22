@@ -1358,6 +1358,46 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     box-sizing:border-box!important;
   }
 }
+
+/* Expanded hotel page: flush to the right menu, breathing room on the left */
+@media(min-width:701px){
+  .contentStage.hotelDetailMode{
+    width:auto!important;
+    max-width:none!important;
+    margin-right:210px!important;
+    margin-left:48px!important;
+    padding-right:0!important;
+    padding-left:0!important;
+    box-sizing:border-box!important;
+  }
+
+  .contentStage.hotelDetailMode .hotelDetailPanel{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:42px 40px!important;
+    box-sizing:border-box!important;
+  }
+}
+
+@media(max-width:700px){
+  .contentStage.hotelDetailMode{
+    width:auto!important;
+    max-width:none!important;
+    margin-right:150px!important;
+    margin-left:10px!important;
+    padding-right:0!important;
+    padding-left:0!important;
+    box-sizing:border-box!important;
+  }
+
+  .contentStage.hotelDetailMode .hotelDetailPanel{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -1835,6 +1875,8 @@ function selectPhuketArea(area,e){
 let currentPhuketArea='פאטונג';
 function hideHotelDetails(){
   document.querySelectorAll('.hotelDetailPanel').forEach(x=>x.classList.remove('active'));
+  const stage=document.getElementById('contentStage');
+  if(stage)stage.classList.remove('hotelDetailMode');
 }
 function showPhuketAreas(){
   hideHotelDetails();
@@ -1874,6 +1916,8 @@ function showHotel(id){
   if(areas)areas.style.display='none';
   if(cards)cards.style.display='none';
   hideHotelDetails();
+  const stage=document.getElementById('contentStage');
+  if(stage)stage.classList.add('hotelDetailMode');
   document.getElementById(id).classList.add('active');
 }
 function showMovenpick(){currentPhuketArea='פאטונג';showHotel('movenpickDetail')}
