@@ -357,6 +357,52 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   .hotelGrid{grid-template-columns:1fr!important}
   .hotelPreviewTop{height:155px!important}
 }
+.glassNavButtonUpgrade{display:none}
+
+/* Clear glass navigation buttons */
+.areasBack,
+.detailBack{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:42px;
+  padding:10px 17px!important;
+  margin-bottom:14px!important;
+  border-radius:15px!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  background:linear-gradient(145deg,rgba(10,24,26,.52),rgba(0,0,0,.36))!important;
+  color:#fff!important;
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  letter-spacing:.1px;
+  text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 9px rgba(0,0,0,.55)!important;
+  box-shadow:
+    0 7px 0 rgba(0,0,0,.16),
+    0 14px 24px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.16)!important;
+  backdrop-filter:blur(12px) saturate(1.15)!important;
+  -webkit-backdrop-filter:blur(12px) saturate(1.15)!important;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease!important;
+}
+.areasBack:hover,
+.detailBack:hover{
+  transform:translateY(-2px)!important;
+  background:linear-gradient(145deg,rgba(18,38,40,.60),rgba(0,0,0,.43))!important;
+  box-shadow:
+    0 9px 0 rgba(0,0,0,.14),
+    0 18px 27px rgba(0,0,0,.27),
+    inset 0 1px 0 rgba(255,255,255,.20)!important;
+}
+.areasBack:active,
+.detailBack:active{
+  transform:translateY(1px)!important;
+  box-shadow:
+    0 3px 0 rgba(0,0,0,.16),
+    0 8px 14px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.14)!important;
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
