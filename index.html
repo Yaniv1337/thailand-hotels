@@ -1235,6 +1235,72 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     max-width:100%!important;
   }
 }
+
+/* Wider and more spacious hotel detail pages */
+@media(min-width:701px){
+  .contentStage{
+    width:calc(100% - 220px)!important;
+    margin-right:210px!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  .hotelDetailPanel{
+    width:100%!important;
+    max-width:none!important;
+    padding:44px 50px!important;
+    border-radius:30px!important;
+  }
+  .hotelDetailPanel h1{
+    font-size:34px!important;
+    margin:10px 0 6px!important;
+  }
+  .hotelDetailPanel>.stars{
+    font-size:18px!important;
+    margin-bottom:18px!important;
+  }
+  .hotelDetailPanel>.verified{
+    padding:16px 20px!important;
+    margin:18px 0 24px!important;
+    line-height:1.7!important;
+  }
+  .hotelDetailPanel .section{
+    padding:26px 28px!important;
+    margin:22px 0!important;
+    line-height:1.85!important;
+  }
+  .hotelDetailPanel .section h2{
+    font-size:23px!important;
+    margin-bottom:16px!important;
+  }
+  .hotelDetailPanel .infoRows{
+    gap:13px!important;
+  }
+  .hotelDetailPanel .infoRow{
+    grid-template-columns:minmax(175px,220px) 1fr!important;
+    gap:20px!important;
+    padding:14px 16px!important;
+  }
+  .hotelDetailPanel .roomTable th,
+  .hotelDetailPanel .roomTable td{
+    padding:14px 12px!important;
+    line-height:1.6!important;
+  }
+  .hotelDetailPanel .bookingLinks{
+    gap:13px!important;
+    margin-top:14px!important;
+  }
+}
+@media(max-width:700px){
+  .hotelDetailPanel{
+    padding:22px 16px!important;
+    border-radius:20px!important;
+  }
+  .hotelDetailPanel .section{
+    padding:18px 15px!important;
+    margin:16px 0!important;
+    line-height:1.75!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
