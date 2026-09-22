@@ -472,6 +472,24 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   line-height:1.55!important;
   text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 9px rgba(0,0,0,.52)!important;
 }
+.backAboveTitleUpgrade{display:none}
+.areasBack,
+.destinationBack,
+.detailBack{
+  display:flex!important;
+  width:max-content!important;
+  max-width:100%!important;
+  clear:both!important;
+  margin:0 0 13px 0!important;
+}
+#phuketAreas .destinationHead,
+#phuketCards .destinationHead{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  clear:both!important;
+  margin-top:0!important;
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -594,7 +612,7 @@ document.addEventListener('DOMContentLoaded',function(){
       box.classList.remove('show');
     }
   });
-});;</script><div class="footer">🌺 <b>Thailand Hotels</b> · המאגר הפרטי שלך לתאילנד 🌴</div><div class="quickNav"><div class="quickSearch"><input id="siteSearch" placeholder="חיפוש" autocomplete="off"><div id="searchSuggestions" class="searchSuggestions"></div><button class="searchIconBtn" onclick="searchSite()" aria-label="חיפוש" title="חיפוש"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><line x1="16" y1="16" x2="21" y2="21"></line></svg></button></div><div class="destinationPills" id="destinationPills"></div></div><script>const navDestinations=['פוקט','קאו לאק','קוסמוי','קופנגן','קראבי','קופיפי','קו לנטה','קו צ׳אנג','קו יאו יאי','קו יאו נוי','קו סאמט','פאטאיה','בנגקוק','הואה הין','קנצ׳נבורי','צ׳יאנג מאי','פאי','צ׳יאנג ראי'];document.getElementById('destinationPills').innerHTML=navDestinations.map((n,i)=>'<button onclick="'+(i===0?'openPhuket()':'empty(\''+n+'\')')+'">'+n+'</button>').join('');function searchSite(){const v=document.getElementById('siteSearch').value.trim().toLowerCase();if(!v)return;if(v.includes('movenpick')||v.includes('mövenpick')||v.includes('מובנפיק')||v.includes('מית')||v.includes('myth')){openPhuket();currentPhuketArea='פאטונג';showMovenpick();return}if(v.includes('m social')||v.includes('msocial')||v.includes('m-social')||v.includes('סושיאל')){openPhuket();currentPhuketArea='פאטונג';showHotel('msocialDetail');return}if(v.includes('charm')||v.includes('צארם')||v.includes('צ׳ארם')){openPhuket();currentPhuketArea='פאטונג';showHotel('charmDetail');return}const m=navDestinations.find(x=>x.toLowerCase().includes(v)||v.includes(x.toLowerCase()));if(m){navDestinations.indexOf(m)===0?openPhuket():empty(m)}else alert('לא נמצא יעד או מלון בשם '+v)}</script><main id="contentStage" class="contentStage"><section id="phuketAreas" class="phuketAreasSection"><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
+});;</script><div class="footer">🌺 <b>Thailand Hotels</b> · המאגר הפרטי שלך לתאילנד 🌴</div><div class="quickNav"><div class="quickSearch"><input id="siteSearch" placeholder="חיפוש" autocomplete="off"><div id="searchSuggestions" class="searchSuggestions"></div><button class="searchIconBtn" onclick="searchSite()" aria-label="חיפוש" title="חיפוש"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><line x1="16" y1="16" x2="21" y2="21"></line></svg></button></div><div class="destinationPills" id="destinationPills"></div></div><script>const navDestinations=['פוקט','קאו לאק','קוסמוי','קופנגן','קראבי','קופיפי','קו לנטה','קו צ׳אנג','קו יאו יאי','קו יאו נוי','קו סאמט','פאטאיה','בנגקוק','הואה הין','קנצ׳נבורי','צ׳יאנג מאי','פאי','צ׳יאנג ראי'];document.getElementById('destinationPills').innerHTML=navDestinations.map((n,i)=>'<button onclick="'+(i===0?'openPhuket()':'empty(\''+n+'\')')+'">'+n+'</button>').join('');function searchSite(){const v=document.getElementById('siteSearch').value.trim().toLowerCase();if(!v)return;if(v.includes('movenpick')||v.includes('mövenpick')||v.includes('מובנפיק')||v.includes('מית')||v.includes('myth')){openPhuket();currentPhuketArea='פאטונג';showMovenpick();return}if(v.includes('m social')||v.includes('msocial')||v.includes('m-social')||v.includes('סושיאל')){openPhuket();currentPhuketArea='פאטונג';showHotel('msocialDetail');return}if(v.includes('charm')||v.includes('צארם')||v.includes('צ׳ארם')){openPhuket();currentPhuketArea='פאטונג';showHotel('charmDetail');return}const m=navDestinations.find(x=>x.toLowerCase().includes(v)||v.includes(x.toLowerCase()));if(m){navDestinations.indexOf(m)===0?openPhuket():empty(m)}else alert('לא נמצא יעד או מלון בשם '+v)}</script><main id="contentStage" class="contentStage"><section id="phuketAreas" class="phuketAreasSection"><button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
 <button onclick="showPhuketArea('פאטונג')"><strong>פאטונג</strong><small>Patong</small><span>3 מלונות</span></button>
 <button onclick="showPhuketArea('קאטה')"><strong>קאטה</strong><small>Kata</small><span>0 מלונות</span></button>
 <button onclick="showPhuketArea('קארון')"><strong>קארון</strong><small>Karon</small><span>0 מלונות</span></button>
