@@ -801,6 +801,107 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   #seasonsPanel .seasonGrid{grid-template-columns:1fr!important}
   #seasonsPanel .seasonMonths{grid-template-columns:repeat(4,minmax(0,1fr))!important}
 }
+.compactHotelDetailUpgrade{display:none}
+
+/* Hotel detail pages: narrower, cleaner and more compact */
+.hotelDetailPanel.active{
+  width:min(1080px,100%)!important;
+  max-width:1080px!important;
+  margin:0 auto!important;
+}
+.hotelDetailPanel{
+  padding:22px!important;
+}
+.hotelDetailPanel h1{
+  margin:6px 0 3px!important;
+  line-height:1.15!important;
+}
+.hotelDetailPanel>.stars{
+  margin:2px 0 8px!important;
+}
+.hotelDetailPanel .section{
+  padding:14px 16px!important;
+  margin:10px 0!important;
+  line-height:1.5!important;
+}
+.hotelDetailPanel .section h2{
+  margin:0 0 8px!important;
+}
+
+/* Do not stretch short information rows across the full panel */
+.hotelDetailPanel .infoRows{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:7px!important;
+}
+.hotelDetailPanel .infoRow{
+  width:fit-content!important;
+  max-width:100%!important;
+  grid-template-columns:minmax(135px,180px) minmax(0,auto)!important;
+  gap:10px!important;
+  padding:8px 10px!important;
+}
+.hotelDetailPanel .infoRow span{
+  line-height:1.4!important;
+}
+
+/* Compact room table spacing */
+.hotelDetailPanel .roomTableWrap{
+  margin-top:7px!important;
+}
+.hotelDetailPanel .roomTable{
+  min-width:820px!important;
+  margin-top:0!important;
+}
+.hotelDetailPanel .roomTable th,
+.hotelDetailPanel .roomTable td{
+  padding:7px 8px!important;
+  line-height:1.25!important;
+  vertical-align:middle!important;
+}
+.hotelDetailPanel .roomTable td{
+  font-size:13.5px!important;
+}
+.hotelDetailPanel .roomTable th{
+  font-size:12.5px!important;
+}
+.hotelDetailPanel .occupancyNote{
+  margin-top:2px!important;
+  line-height:1.2!important;
+  font-size:11px!important;
+}
+.hotelDetailPanel .roomPhotoLink{
+  line-height:1.2!important;
+}
+.hotelDetailPanel .bookingLinks{
+  margin-top:7px!important;
+}
+.hotelDetailPanel .bookingHint,
+.hotelDetailPanel .roomSourceNote,
+.hotelDetailPanel .distanceNote{
+  margin-top:6px!important;
+  line-height:1.4!important;
+}
+
+@media(max-width:700px){
+  .hotelDetailPanel{
+    width:100%!important;
+    max-width:100%!important;
+    padding:15px!important;
+  }
+  .hotelDetailPanel .section{
+    padding:12px!important;
+  }
+  .hotelDetailPanel .infoRow{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    gap:2px!important;
+  }
+  .hotelDetailPanel .roomTable{
+    min-width:760px!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
