@@ -589,6 +589,86 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   .seasonMonths{overflow-x:auto;display:flex;padding-bottom:3px}
   .seasonMonth{min-width:54px}
 }
+.seasonCardVisibleFix{display:none}
+.seasonsPanel{
+  width:100%!important;
+  display:none;
+}
+.seasonGrid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:22px!important;
+  max-width:1180px!important;
+  margin:0!important;
+}
+.seasonCard{
+  min-height:178px!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:24px!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(226,237,235,.95))!important;
+  border:1px solid rgba(255,255,255,.95)!important;
+  box-shadow:0 8px 0 rgba(27,79,82,.16),0 18px 30px rgba(0,35,42,.25),inset 0 1px 0 #fff!important;
+}
+.seasonCardHead{
+  min-height:64px!important;
+  margin:0!important;
+  padding:13px 18px!important;
+  display:flex!important;
+  align-items:center!important;
+  background:linear-gradient(135deg,rgba(13,57,61,.96),rgba(27,89,89,.90))!important;
+  border-bottom:1px solid rgba(255,255,255,.18)!important;
+}
+.seasonCardHead h3{
+  margin:0!important;
+  font-family:'Rubik','Heebo',Arial,sans-serif!important;
+  font-size:22px!important;
+  font-weight:900!important;
+  color:#fff7d7!important;
+  text-shadow:0 2px 7px rgba(0,0,0,.42)!important;
+}
+.seasonCardHead span{
+  display:block!important;
+  margin-top:2px!important;
+  color:rgba(255,255,255,.78)!important;
+  font-size:12px!important;
+  font-weight:700!important;
+}
+.seasonMonths{
+  direction:rtl!important;
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:7px!important;
+  padding:14px 15px 16px!important;
+}
+.seasonMonth{
+  min-width:0!important;
+  min-height:38px!important;
+  padding:7px 4px!important;
+  border-radius:10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  border:1px solid rgba(23,63,67,.10)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.82)!important;
+}
+.seasonMonth b{
+  font-size:11px!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+}
+.seasonMonth.pending{
+  background:linear-gradient(145deg,#f7fbfa,#e4eeec)!important;
+  color:#496667!important;
+}
+@media(max-width:980px){
+  .seasonGrid{grid-template-columns:1fr!important}
+}
+@media(max-width:700px){
+  .seasonMonths{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  .seasonCardHead h3{font-size:20px!important}
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -711,7 +791,119 @@ document.addEventListener('DOMContentLoaded',function(){
       box.classList.remove('show');
     }
   });
-});;</script><div class="footer">🌺 <b>Thailand Hotels</b> · המאגר הפרטי שלך לתאילנד 🌴</div><div class="quickNav"><div class="quickSearch"><input id="siteSearch" placeholder="חיפוש" autocomplete="off"><div id="searchSuggestions" class="searchSuggestions"></div><button class="searchIconBtn" onclick="searchSite()" aria-label="חיפוש" title="חיפוש"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><line x1="16" y1="16" x2="21" y2="21"></line></svg></button></div><div class="destinationPills" id="destinationPills"></div></div><script>const navDestinations=['פוקט','קאו לאק','קוסמוי','קופנגן','קראבי','קופיפי','קו לנטה','קו צ׳אנג','קו יאו יאי','קו יאו נוי','קו סאמט','פאטאיה','בנגקוק','הואה הין','קנצ׳נבורי','צ׳יאנג מאי','פאי','צ׳יאנג ראי'];document.getElementById('destinationPills').innerHTML=navDestinations.map((n,i)=>'<button onclick="'+(i===0?'openPhuket()':'empty(\''+n+'\')')+'">'+n+'</button>').join('');function searchSite(){const v=document.getElementById('siteSearch').value.trim().toLowerCase();if(!v)return;if(v.includes('movenpick')||v.includes('mövenpick')||v.includes('מובנפיק')||v.includes('מית')||v.includes('myth')){openPhuket();currentPhuketArea='פאטונג';showMovenpick();return}if(v.includes('m social')||v.includes('msocial')||v.includes('m-social')||v.includes('סושיאל')){openPhuket();currentPhuketArea='פאטונג';showHotel('msocialDetail');return}if(v.includes('charm')||v.includes('צארם')||v.includes('צ׳ארם')){openPhuket();currentPhuketArea='פאטונג';showHotel('charmDetail');return}const m=navDestinations.find(x=>x.toLowerCase().includes(v)||v.includes(x.toLowerCase()));if(m){navDestinations.indexOf(m)===0?openPhuket():empty(m)}else alert('לא נמצא יעד או מלון בשם '+v)}</script><main id="contentStage" class="contentStage"><section id="phuketAreas" class="phuketAreasSection"><button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
+});;</script><div class="footer">🌺 <b>Thailand Hotels</b> · המאגר הפרטי שלך לתאילנד 🌴</div><div class="quickNav"><div class="quickSearch"><input id="siteSearch" placeholder="חיפוש" autocomplete="off"><div id="searchSuggestions" class="searchSuggestions"></div><button class="searchIconBtn" onclick="searchSite()" aria-label="חיפוש" title="חיפוש"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><line x1="16" y1="16" x2="21" y2="21"></line></svg></button></div><div class="destinationPills" id="destinationPills"></div></div><script>const navDestinations=['פוקט','קאו לאק','קוסמוי','קופנגן','קראבי','קופיפי','קו לנטה','קו צ׳אנג','קו יאו יאי','קו יאו נוי','קו סאמט','פאטאיה','בנגקוק','הואה הין','קנצ׳נבורי','צ׳יאנג מאי','פאי','צ׳יאנג ראי'];document.getElementById('destinationPills').innerHTML=navDestinations.map((n,i)=>'<button onclick="'+(i===0?'openPhuket()':'empty(\''+n+'\')')+'">'+n+'</button>').join('');function searchSite(){const v=document.getElementById('siteSearch').value.trim().toLowerCase();if(!v)return;if(v.includes('movenpick')||v.includes('mövenpick')||v.includes('מובנפיק')||v.includes('מית')||v.includes('myth')){openPhuket();currentPhuketArea='פאטונג';showMovenpick();return}if(v.includes('m social')||v.includes('msocial')||v.includes('m-social')||v.includes('סושיאל')){openPhuket();currentPhuketArea='פאטונג';showHotel('msocialDetail');return}if(v.includes('charm')||v.includes('צארם')||v.includes('צ׳ארם')){openPhuket();currentPhuketArea='פאטונג';showHotel('charmDetail');return}const m=navDestinations.find(x=>x.toLowerCase().includes(v)||v.includes(x.toLowerCase()));if(m){navDestinations.indexOf(m)===0?openPhuket():empty(m)}else alert('לא נמצא יעד או מלון בשם '+v)}</script><main id="contentStage" class="contentStage"><section id="seasonsPanel" class="seasonsPanel" style="display:none">
+      <button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button>
+      <h2 class="destinationHead">עונות בתאילנד</h2>
+      <div class="seasonGrid">
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>פוקט</h3><span>Phuket</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קאו לאק</h3><span>Khao Lak</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קוסמוי</h3><span>Koh Samui</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קופנגן</h3><span>Koh Phangan</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קראבי</h3><span>Krabi</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קופיפי</h3><span>Koh Phi Phi</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קו לנטה</h3><span>Koh Lanta</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קו צ׳אנג</h3><span>Koh Chang</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קו יאו יאי</h3><span>Koh Yao Yai</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קו יאו נוי</h3><span>Koh Yao Noi</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קו סאמט</h3><span>Koh Samet</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>פאטאיה</h3><span>Pattaya</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>בנגקוק</h3><span>Bangkok</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>הואה הין</h3><span>Hua Hin</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>קנצ׳נבורי</h3><span>Kanchanaburi</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>צ׳יאנג מאי</h3><span>Chiang Mai</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>פאי</h3><span>Pai</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article>
+<article class="seasonCard">
+  <div class="seasonCardHead">
+    <div><h3>צ׳יאנג ראי</h3><span>Chiang Rai</span></div>
+  </div>
+  <div class="seasonMonths"><span class="seasonMonth pending"><b>ינואר</b></span><span class="seasonMonth pending"><b>פברואר</b></span><span class="seasonMonth pending"><b>מרץ</b></span><span class="seasonMonth pending"><b>אפריל</b></span><span class="seasonMonth pending"><b>מאי</b></span><span class="seasonMonth pending"><b>יוני</b></span><span class="seasonMonth pending"><b>יולי</b></span><span class="seasonMonth pending"><b>אוגוסט</b></span><span class="seasonMonth pending"><b>ספטמבר</b></span><span class="seasonMonth pending"><b>אוקטובר</b></span><span class="seasonMonth pending"><b>נובמבר</b></span><span class="seasonMonth pending"><b>דצמבר</b></span></div>
+</article></div>
+    </section><section id="phuketAreas" class="phuketAreasSection"><button class="areasBack destinationBack" onclick="home()">← חזרה לתפריט</button><h2 class="destinationHead">אזורים בפוקט</h2><p class="areaIntro">בחר אזור כדי לראות את המלונות שמתוייגים אליו לפי מיקום המלון במפות.</p><div class="areaGrid">
 <button onclick="showPhuketArea('פאטונג')"><strong>פאטונג</strong><small>Patong</small><span>3 מלונות</span></button>
 <button onclick="showPhuketArea('קאטה')"><strong>קאטה</strong><small>Kata</small><span>0 מלונות</span></button>
 <button onclick="showPhuketArea('קארון')"><strong>קארון</strong><small>Karon</small><span>0 מלונות</span></button>
@@ -934,13 +1126,14 @@ function openSeasons(){
   hide();
   const stage=document.getElementById('contentStage');
   if(stage){stage.classList.add('active');stage.style.display='block'}
+  const seasons=document.getElementById('seasonsPanel');
   const areas=document.getElementById('phuketAreas');
   const cards=document.getElementById('phuketCards');
+  if(seasons)seasons.style.display='block';
   if(areas)areas.style.display='none';
   if(cards)cards.style.display='none';
   hideHotelDetails();
-  const seasons=document.getElementById('seasonsPanel');
-  if(seasons)seasons.style.display='block';
+  document.querySelectorAll('.hotelDetailPanel').forEach(x=>x.classList.remove('active'));
   const menu=document.querySelector('.sideMenu');
   if(menu){menu.classList.remove('phuketOpen');menu.classList.remove('destOpen')}
   window.scrollTo({top:0,behavior:'smooth'});
