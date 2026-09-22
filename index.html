@@ -1235,211 +1235,6 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     max-width:100%!important;
   }
 }
-
-/* Wider and more spacious hotel detail pages */
-@media(min-width:701px){
-  .contentStage{
-    width:calc(100% - 220px)!important;
-    margin-right:210px!important;
-    padding-left:20px!important;
-    padding-right:20px!important;
-  }
-  .hotelDetailPanel{
-    width:100%!important;
-    max-width:none!important;
-    padding:44px 50px!important;
-    border-radius:30px!important;
-  }
-  .hotelDetailPanel h1{
-    font-size:34px!important;
-    margin:10px 0 6px!important;
-  }
-  .hotelDetailPanel>.stars{
-    font-size:18px!important;
-    margin-bottom:18px!important;
-  }
-  .hotelDetailPanel>.verified{
-    padding:16px 20px!important;
-    margin:18px 0 24px!important;
-    line-height:1.7!important;
-  }
-  .hotelDetailPanel .section{
-    padding:26px 28px!important;
-    margin:22px 0!important;
-    line-height:1.85!important;
-  }
-  .hotelDetailPanel .section h2{
-    font-size:23px!important;
-    margin-bottom:16px!important;
-  }
-  .hotelDetailPanel .infoRows{
-    gap:13px!important;
-  }
-  .hotelDetailPanel .infoRow{
-    grid-template-columns:minmax(175px,220px) 1fr!important;
-    gap:20px!important;
-    padding:14px 16px!important;
-  }
-  .hotelDetailPanel .roomTable th,
-  .hotelDetailPanel .roomTable td{
-    padding:14px 12px!important;
-    line-height:1.6!important;
-  }
-  .hotelDetailPanel .bookingLinks{
-    gap:13px!important;
-    margin-top:14px!important;
-  }
-}
-@media(max-width:700px){
-  .hotelDetailPanel{
-    padding:22px 16px!important;
-    border-radius:20px!important;
-  }
-  .hotelDetailPanel .section{
-    padding:18px 15px!important;
-    margin:16px 0!important;
-    line-height:1.75!important;
-  }
-}
-
-/* Edge-to-edge hotel detail layout */
-@media(min-width:701px){
-  .contentStage{
-    width:100%!important;
-    max-width:none!important;
-    margin-right:0!important;
-    margin-left:0!important;
-    padding-left:10px!important;
-    padding-right:10px!important;
-    box-sizing:border-box!important;
-  }
-
-  .hotelDetailPanel{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:42px 34px!important;
-    border-radius:24px!important;
-    box-sizing:border-box!important;
-  }
-
-  .hotelDetailPanel .section{
-    width:100%!important;
-    max-width:none!important;
-    padding:24px 24px!important;
-    margin:18px 0!important;
-    box-sizing:border-box!important;
-  }
-
-  .hotelDetailPanel .infoRows,
-  .hotelDetailPanel .roomTableWrap{
-    width:100%!important;
-    max-width:none!important;
-  }
-}
-
-@media(max-width:700px){
-  .contentStage{
-    width:100%!important;
-    max-width:none!important;
-    margin-right:0!important;
-    margin-left:0!important;
-    padding-left:6px!important;
-    padding-right:6px!important;
-    box-sizing:border-box!important;
-  }
-
-  .hotelDetailPanel{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:18px 12px!important;
-    border-radius:16px!important;
-    box-sizing:border-box!important;
-  }
-}
-
-/* Expanded hotel page: flush to the right menu, breathing room on the left */
-@media(min-width:701px){
-  .contentStage.hotelDetailMode{
-    width:auto!important;
-    max-width:none!important;
-    margin-right:210px!important;
-    margin-left:48px!important;
-    padding-right:0!important;
-    padding-left:0!important;
-    box-sizing:border-box!important;
-  }
-
-  .contentStage.hotelDetailMode .hotelDetailPanel{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:42px 40px!important;
-    box-sizing:border-box!important;
-  }
-}
-
-@media(max-width:700px){
-  .contentStage.hotelDetailMode{
-    width:auto!important;
-    max-width:none!important;
-    margin-right:150px!important;
-    margin-left:10px!important;
-    padding-right:0!important;
-    padding-left:0!important;
-    box-sizing:border-box!important;
-  }
-
-  .contentStage.hotelDetailMode .hotelDetailPanel{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    box-sizing:border-box!important;
-  }
-}
-
-/* FINAL expanded hotel width override */
-@media(min-width:701px){
-  body .contentStage.active.hotelDetailMode{
-    width:calc(100vw - 244px)!important;
-    max-width:none!important;
-    margin-right:214px!important;
-    margin-left:30px!important;
-    padding-right:0!important;
-    padding-left:0!important;
-    box-sizing:border-box!important;
-  }
-
-  body .contentStage.active.hotelDetailMode > .hotelDetailPanel.active{
-    width:100%!important;
-    max-width:none!important;
-    min-width:0!important;
-    margin:0!important;
-    padding:40px 34px!important;
-    box-sizing:border-box!important;
-  }
-}
-
-@media(max-width:700px){
-  body .contentStage.active.hotelDetailMode{
-    width:calc(100vw - 162px)!important;
-    max-width:none!important;
-    margin-right:154px!important;
-    margin-left:8px!important;
-    padding-right:0!important;
-    padding-left:0!important;
-    box-sizing:border-box!important;
-  }
-
-  body .contentStage.active.hotelDetailMode > .hotelDetailPanel.active{
-    width:100%!important;
-    max-width:none!important;
-    min-width:0!important;
-    margin:0!important;
-    box-sizing:border-box!important;
-  }
-}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
@@ -1649,7 +1444,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 <article class="hotelPreview" data-area="פאטונג" onclick="showHotel('charmDetail')"><div class="hotelPreviewTop"><img src="https://www.thecharmresortphuket.com/images/1749x600x550.jpg" alt="The Charm Resort Phuket"><div><strong style="font-size:20px">The Charm Resort Phuket</strong><br>Patong</div></div><div class="hotelPreviewBody"><h3>The Charm Resort Phuket</h3><div class="stars">★★★★</div><div class="googleScoreInline"><span>Google</span> <b>4.2 ★</b> <small>(2,398 ביקורות)</small></div><div class="meta">📍 Patong Beach · 212 Thaweewong Road</div><div class="tags"><span>זוגות</span><span>משפחות</span><span>Pool Access</span><span>Rooftop Infinity Pool</span></div><p class="agentNote">מלון 4 כוכבים בצפון פאטונג, דקה מהחוף ובמרחק הליכה מאזורי הקניות וחיי הלילה, אבל במיקום רגוע יותר מהמרכז העמוס.</p></div></article><article class="hotelPreview" data-area="פאטונג" onclick="showHotel('msocialDetail')"><div class="hotelPreviewTop"><img src="https://jungceylon.com/images/mSocialPhuket/contemporaryLuxuryAndIslandCharmImageOne.png" alt="M Social Hotel Phuket"><div><strong style="font-size:20px">M Social Hotel Phuket</strong><br>Patong</div></div><div class="hotelPreviewBody"><h3>M Social Hotel Phuket</h3><div class="stars">★★★★★</div><div class="googleScoreInline"><span>Google</span> <b>4.4 ★</b> <small>(2,945 ביקורות)</small></div><div class="meta">📍 Jungceylon · Patong · 418 חדרים</div><div class="tags"><span>מרכזי מאוד</span><span>זוגות</span><span>משפחות</span><span>Pool Access</span></div><p class="agentNote">מלון Lifestyle מודרני בלב פאטונג, מחובר ל־Jungceylon ובמרחק דקות מ־Bangla Road, Central Patong וחוף פאטונג.</p></div></article><article class="hotelPreview" data-area="פאטונג" onclick="showHotel('fourPointsDetail')"><div class="hotelPreviewTop"><img src="https://cache.marriott.com/is/image/marriotts7prod/fp-hktfp-aerial-view-39871%3AWide-Hor?fit=constrain&wid=750" alt="Four Points by Sheraton Phuket Patong Beach Resort"><div><strong style="font-size:20px">Four Points by Sheraton</strong><br>Phuket Patong Beach Resort</div></div><div class="hotelPreviewBody"><h3>Four Points by Sheraton Phuket Patong Beach Resort</h3><div class="stars">★★★★</div><div class="googleScoreInline"><span>Google</span> <b>4.5 ★</b> <small>(3,462 ביקורות)</small></div><div class="meta">📍 North Patong · 600 חדרים וסוויטות · צעדים מחוף פאטונג</div><div class="tags"><span>משפחות</span><span>זוגות</span><span>Kids Club</span><span>Pool Access</span></div><p class="agentNote">ריזורט מודרני גדול בצפון פאטונג, מול החוף ובאזור רגוע יותר מהמרכז. חזק למשפחות בזכות Kids Club, בריכות ילדים, Family Suite ופעילויות יומיות.</p></div></article>
-<article class="hotelPreview" data-area="פאטונג" onclick="showHotel('burasariDetail')"><div class="hotelPreviewTop"><div><strong style="font-size:20px">Burasari Phuket</strong><br>Patong</div></div><div class="hotelPreviewBody"><h3>Burasari Phuket</h3><div class="stars">★★★★</div><div class="googleScoreInline"><span>Google</span> <b>4.5 ★</b> <small>(3,730 ביקורות)</small></div><div class="meta">📍 Patong · כ־50 מטר מחוף פאטונג · 2 בריכות</div><div class="tags"><span>זוגות</span><span>ירח דבש</span><span>Pool Access</span><span>Spa</span></div><p class="agentNote">מלון בוטיק טרופי בפאטונג, קרוב מאוד לחוף ובמרחק הליכה מהמרכז. חזק במיוחד לזוגות בזכות Honeymoon Room, חדרי Pool Access, קטגוריות עם Jacuzzi ו־Spa Burasari.</p></div></article></div></section><section id="movenpickDetail" class="hotelDetailPanel"><button class="detailBack" onclick="showPhuketCards()">← חזרה למלונות פוקט</button><h1>Mövenpick Myth Hotel Patong Phuket</h1><p class="stars">★★★★★ · Patong, Phuket</p><p class="verified">המידע נבדק מול האתר הרשמי של Mövenpick / Accor · עודכן בספטמבר 2026</p><div class="section"><h2>מידע כללי על המלון</h2><div class="infoRows">
+<article class="hotelPreview" data-area="פאטונג" onclick="showHotel('burasariDetail')"><div class="hotelPreviewTop"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BMW%20R1200C%20Phuket.jpg" alt="Burasari Phuket" loading="lazy"><div><strong style="font-size:20px">Burasari Phuket</strong><br>Patong</div></div><div class="hotelPreviewBody"><h3>Burasari Phuket</h3><div class="stars">★★★★</div><div class="googleScoreInline"><span>Google</span> <b>4.5 ★</b> <small>(3,730 ביקורות)</small></div><div class="meta">📍 Patong · כ־50 מטר מחוף פאטונג · 2 בריכות</div><div class="tags"><span>זוגות</span><span>ירח דבש</span><span>Pool Access</span><span>Spa</span></div><p class="agentNote">מלון בוטיק טרופי בפאטונג, קרוב מאוד לחוף ובמרחק הליכה מהמרכז. חזק במיוחד לזוגות בזכות Honeymoon Room, חדרי Pool Access, קטגוריות עם Jacuzzi ו־Spa Burasari.</p></div></article></div></section><section id="movenpickDetail" class="hotelDetailPanel"><button class="detailBack" onclick="showPhuketCards()">← חזרה למלונות פוקט</button><h1>Mövenpick Myth Hotel Patong Phuket</h1><p class="stars">★★★★★ · Patong, Phuket</p><p class="verified">המידע נבדק מול האתר הרשמי של Mövenpick / Accor · עודכן בספטמבר 2026</p><div class="section"><h2>מידע כללי על המלון</h2><div class="infoRows">
 <div class="infoRow"><strong>אופי המלון</strong><span>מלון 5 כוכבים עם עיצוב בהשראת ההיסטוריה ה־Sino-Portuguese של פוקט ותקופת King Rama V. התחושה יותר אלגנטית ומיוחדת ממלון עירוני רגיל בפאטונג.</span></div>
 <div class="infoRow"><strong>למי מתאים</strong><span>טוב לזוגות ולמשפחות שרוצים רמה גבוהה אבל עדיין להיות קרובים למסעדות, קניות וחיי הערב של פאטונג.</span></div>
 <div class="infoRow"><strong>כמות חדרים</strong><span>235 חדרים וסוויטות, מתוכם 14 חדרי משפחה.</span></div>
@@ -1917,8 +1712,6 @@ function selectPhuketArea(area,e){
 let currentPhuketArea='פאטונג';
 function hideHotelDetails(){
   document.querySelectorAll('.hotelDetailPanel').forEach(x=>x.classList.remove('active'));
-  const stage=document.getElementById('contentStage');
-  if(stage)stage.classList.remove('hotelDetailMode');
 }
 function showPhuketAreas(){
   hideHotelDetails();
@@ -1958,8 +1751,6 @@ function showHotel(id){
   if(areas)areas.style.display='none';
   if(cards)cards.style.display='none';
   hideHotelDetails();
-  const stage=document.getElementById('contentStage');
-  if(stage)stage.classList.add('hotelDetailMode');
   document.getElementById(id).classList.add('active');
 }
 function showMovenpick(){currentPhuketArea='פאטונג';showHotel('movenpickDetail')}
