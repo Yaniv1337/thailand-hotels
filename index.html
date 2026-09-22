@@ -201,6 +201,58 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
   .quickSearch{height:56px!important}
   .quickSearch .searchIconBtn{width:42px!important;min-width:42px!important;height:42px!important}
 }
+.hotelWideCompactUpgrade{display:none}
+.hotelGrid{
+  grid-template-columns:repeat(auto-fit,minmax(390px,1fr))!important;
+  gap:24px!important;
+  max-width:1280px!important;
+}
+.hotelPreview{
+  min-height:0!important;
+}
+.hotelPreviewTop{
+  height:175px!important;
+}
+.hotelPreviewBody{
+  min-height:0!important;
+  padding:15px 18px 17px!important;
+}
+.hotelPreviewBody h3{
+  font-size:19px!important;
+  margin-bottom:5px!important;
+}
+.hotelPreviewBody .stars{
+  font-size:16px!important;
+  margin-bottom:2px!important;
+}
+.hotelPreviewBody .googleScoreInline{
+  margin:4px 0 6px!important;
+  padding:5px 9px!important;
+}
+.hotelPreviewBody .meta{
+  margin:5px 0 7px!important;
+  line-height:1.4!important;
+}
+.hotelPreviewBody .tags{
+  gap:6px!important;
+  margin:2px 0 6px!important;
+}
+.hotelPreviewBody .agentNote{
+  margin-top:6px!important;
+  padding-top:8px!important;
+  line-height:1.45!important;
+}
+@media(min-width:1050px){
+  .hotelGrid{grid-template-columns:repeat(2,minmax(430px,1fr))!important}
+}
+@media(max-width:900px){
+  .hotelGrid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))!important}
+  .hotelPreviewTop{height:170px!important}
+}
+@media(max-width:700px){
+  .hotelGrid{grid-template-columns:1fr!important}
+  .hotelPreviewTop{height:165px!important}
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
