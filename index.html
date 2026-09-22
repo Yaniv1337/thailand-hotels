@@ -902,45 +902,6 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     min-width:760px!important;
   }
 }
-.fitInfoRowsToText{display:none}
-
-/* Information rows should end with the text, not stretch across the panel */
-.hotelDetailPanel .infoRows{
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:flex-start!important;
-}
-.hotelDetailPanel .infoRow{
-  display:inline-flex!important;
-  width:max-content!important;
-  max-width:100%!important;
-  min-width:0!important;
-  align-items:flex-start!important;
-  gap:10px!important;
-  grid-template-columns:none!important;
-}
-.hotelDetailPanel .infoRow strong{
-  flex:0 0 auto!important;
-  white-space:normal!important;
-}
-.hotelDetailPanel .infoRow span{
-  flex:0 1 auto!important;
-  width:auto!important;
-  max-width:760px!important;
-  min-width:0!important;
-}
-@media(max-width:700px){
-  .hotelDetailPanel .infoRow{
-    width:100%!important;
-    max-width:100%!important;
-    display:flex!important;
-    flex-direction:column!important;
-    gap:2px!important;
-  }
-  .hotelDetailPanel .infoRow span{
-    max-width:100%!important;
-  }
-}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
