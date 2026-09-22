@@ -1146,6 +1146,95 @@ body{background-image:url('%D7%AA%D7%90%D7%99%D7%9C%D7%A0%D7%93%20%D7%AA%D7%9E%D
     max-width:100%!important;
   }
 }
+.seasonFrames3DRefine{display:none}
+
+/* "Important to know" — framed like the rest, without dark overlay */
+#seasonsPanel .seasonGuideNoteStrong{
+  display:inline-block!important;
+  width:fit-content!important;
+  max-width:min(100%,980px)!important;
+  align-self:flex-start!important;
+  margin:0!important;
+  padding:14px 16px!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(228,238,236,.96))!important;
+  border:1px solid rgba(255,255,255,.95)!important;
+  border-radius:18px!important;
+  color:#23484c!important;
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  line-height:1.65!important;
+  text-shadow:none!important;
+  box-shadow:
+    0 8px 0 rgba(27,79,82,.14),
+    0 18px 28px rgba(0,35,42,.20),
+    inset 0 1px 0 rgba(255,255,255,1)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+#seasonsPanel .seasonGuideNoteStrong strong{
+  color:#174d52!important;
+  font-size:15px!important;
+  font-weight:900!important;
+}
+#seasonsPanel .seasonGuideNoteStrong b{
+  color:#294f53!important;
+  font-weight:800!important;
+}
+
+/* Season explanation cards — stronger 3D, matching the site */
+#seasonsPanel .seasonGuideCard{
+  position:relative!important;
+  padding:16px 17px 17px!important;
+  border-radius:20px!important;
+  border-width:1px!important;
+  box-shadow:
+    0 9px 0 rgba(27,79,82,.15),
+    0 19px 30px rgba(0,35,42,.22),
+    inset 0 1px 0 rgba(255,255,255,.96)!important;
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease!important;
+}
+#seasonsPanel .seasonGuideCard:hover{
+  transform:translateY(-4px)!important;
+  box-shadow:
+    0 12px 0 rgba(27,79,82,.14),
+    0 25px 34px rgba(0,35,42,.27),
+    inset 0 1px 0 rgba(255,255,255,.98)!important;
+  filter:saturate(1.03)!important;
+}
+#seasonsPanel .seasonGuideCard:active{
+  transform:translateY(1px)!important;
+  box-shadow:
+    0 4px 0 rgba(27,79,82,.15),
+    0 10px 18px rgba(0,35,42,.19),
+    inset 0 1px 0 rgba(255,255,255,.94)!important;
+}
+#seasonsPanel .seasonGuideCard strong{
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-size:16px!important;
+  font-weight:900!important;
+}
+#seasonsPanel .seasonGuideCard span{
+  font-family:'Heebo',Arial,sans-serif!important;
+  font-weight:700!important;
+  line-height:1.55!important;
+}
+#seasonsPanel .goodGuide{
+  background:linear-gradient(145deg,#edf8f0,#d8efdf)!important;
+}
+#seasonsPanel .rainGuide{
+  background:linear-gradient(145deg,#edf7fc,#d7eaf7)!important;
+}
+#seasonsPanel .hotGuide{
+  background:linear-gradient(145deg,#fff1e4,#f5ddc4)!important;
+}
+
+@media(max-width:700px){
+  #seasonsPanel .seasonGuideNoteStrong{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
 </style></head><body>
 <div class="mainTop"><header class="hero"><div class="heroContent" onclick="home()" role="button" tabindex="0" aria-label="חזרה לעמוד הבית" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();home();}"><div class="lotus">♢</div><div class="heroThailand">Thailand</div><div class="heroLine">HOTEL DISCOVERY</div><div class="thaiMark">DREAM • EXPLORE • STAY • REPEAT</div><div class="heroTag">More than a destination — A feeling ♡</div></div></header></div>
 <div class="wrap">
